@@ -1,10 +1,53 @@
 import React, { Component } from 'react';
+import TodoForm from './components/TodoForm.js';
+import TodoList from './components/TodoList.js';
+import './_App.scss';
 
 class App extends Component{
-    render(){
+
+    id = 0
+    state = {
+        init: [
+        {
+            id : this.id++,
+            todo : '카페 가기'
+        },
+        {
+            id : this.id ++,
+            todo : 'REACT로 TODOLIST 만들기'
+        }
+        ]
+    };
+
+    handleCreate = (e) => {
+        const { init } = this.state;
+        this.setState({
+            init : init.concat({
+                id : this.id ++,
+                ...e
+            })
+        })
+        console.log(e);
+    }
+
+    handleDelete = (id) => {
+        const {init} = this.state;
+        this.setState({
+            init : init.filter(
+                init => init.id !== id
+            )
+        })
+    }
+
+    render(){// eslint-disable-next-line
+        const { init } = this.state; 
         return(
             <div className = "App">
-                <h1> 안녕하세요.</h1>
+                <TodoForm onCreate = {this.handleCreate} />
+                <TodoList 
+                    data = {this.state.init} 
+                    onDelete = {this.handleDelete}    
+                />
             </div>
         )
     }
