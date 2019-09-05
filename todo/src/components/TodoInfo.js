@@ -9,6 +9,12 @@ class TodoInfo extends Component{
             todo : '입력된 값 없음'
         }
     }
+
+    handleDelete = () =>{
+        const {todoInfo, onDelete} = this.props;
+        onDelete(todoInfo.id);
+    }
+    
     render() {
 
         const { todo } = this.props.todoInfo;
@@ -16,6 +22,7 @@ class TodoInfo extends Component{
         return (
             <div className = "App-main">
                <div> {todo} </div>
+               <button onClick = {this.handleDelete}> 삭제 </button>
             </div>
         )
     }
