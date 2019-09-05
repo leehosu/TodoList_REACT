@@ -13,7 +13,7 @@ class App extends Component{
             todo : '카페 가기'
         },
         {
-            id : this.id ++,
+            id : this.id++,
             todo : 'REACT로 TODOLIST 만들기'
         }
         ]
@@ -39,14 +39,25 @@ class App extends Component{
         })
     }
 
-    render(){// eslint-disable-next-line
-        const { init } = this.state; 
+    handleUpdate = (id,data) => {
+        const {init} = this.state;
+        this.setState({
+            init : init.map(
+                init => id === init.id 
+                ? { ...init, ...data} : init
+            )
+        })
+    }
+
+    render(){
+        // const { init } = this.state; 
         return(
             <div className = "App">
                 <TodoForm onCreate = {this.handleCreate} />
                 <TodoList 
                     data = {this.state.init} 
-                    onDelete = {this.handleDelete}    
+                    onDelete = {this.handleDelete}
+                    onUpdate = {this.handleUpdate}
                 />
             </div>
         )
