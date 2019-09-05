@@ -30,12 +30,24 @@ class App extends Component{
         console.log(e);
     }
 
+    handleDelete = (id) => {
+        const {init} = this.state;
+        this.setState({
+            init : init.filter(
+                init => init.id !== id
+            )
+        })
+    }
+
     render(){// eslint-disable-next-line
         const { init } = this.state; 
         return(
             <div className = "App">
                 <TodoForm onCreate = {this.handleCreate} />
-                <TodoList data = {this.state.init} />
+                <TodoList 
+                    data = {this.state.init} 
+                    onDelete = {this.handleDelete}    
+                />
             </div>
         )
     }
