@@ -27,7 +27,6 @@ class App extends Component{
                 ...e
             })
         })
-        console.log(e);
     }
 
     handleDelete = (id) => {
@@ -37,17 +36,38 @@ class App extends Component{
                 init => init.id !== id
             )
         })
+        console.log(id);
     }
 
+<<<<<<< Updated upstream
     render(){// eslint-disable-next-line
         const { init } = this.state; 
+=======
+    handleUpdate = (id,data) => {
+        const {init} = this.state;
+        this.setState({
+            init : init.map(
+                init => id === init.id 
+                ? { ...init, ...data} : init
+            )
+        })
+        
+        console.log(init);
+    }
+
+    render(){
+>>>>>>> Stashed changes
         return(
             <div className = "App">
-                <TodoForm onCreate = {this.handleCreate} />
+                <div className = "App-header">
+                    <TodoForm onCreate = {this.handleCreate} />
+                </div>
+                <div className = "App-main">
                 <TodoList 
                     data = {this.state.init} 
                     onDelete = {this.handleDelete}    
                 />
+                </div>
             </div>
         )
     }

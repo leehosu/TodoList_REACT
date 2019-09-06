@@ -8,8 +8,13 @@ class TodoList extends Component{
     };
     render(){
 
+<<<<<<< Updated upstream
         const { data, onDelete } = this.props;
         
+=======
+        const { data, onDelete, onUpdate } = this.props;
+
+>>>>>>> Stashed changes
         const list = data.map(
             todoInfo => (<TodoInfo 
                             key = {todoInfo.id} 
