@@ -10,12 +10,12 @@ class TodoList extends Component{
     render(){
 
         const { data, onDelete, onUpdate } = this.props;
-        
+
         const list = data.map(
             todoInfo => (<TodoInfo 
                             key = {todoInfo.id} 
                             todoInfo = {todoInfo}
-                            onDelete = {onDelete}     
+                            onDelete = {onDelete}
                             onUpdate = {onUpdate}   
                     />)
         )

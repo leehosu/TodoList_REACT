@@ -1,13 +1,29 @@
-.App-main{
-    border: 0.5px solid gray;
+.App-list{
+    border-bottom: 0.2px solid gray;
     padding: 8px;
-    margin: 8px;
-    background-color: white;
-}
+    margin: {
+        right : 2em;
+        left : 2em;
+        top : 1em;
+    }
+    background-color:white;
+    display : flex;
+    width : 85%;
+    height : 30px;
 
-.input{
-    width: 365px;
-    height: 30px;
-    float: left;
-    margin-left: 5%;
+    .list {
+        flex :1;
+        display : flex;
+    }
+
+    button{
+        color: #fff !important;
+        text-transform: uppercase;
+        background:  #1AAB8A;
+        padding: 5px 10px 5px 10px;
+        border-radius: 30px;
+        border: none;
+        margin: -3px 3px 5px 5px;
+    }
 }
+\

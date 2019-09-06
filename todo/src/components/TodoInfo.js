@@ -20,6 +20,7 @@ class TodoInfo extends Component{
         this.setState({
             todo : value
         });
+
     }
 
     handleDelete = () => {
@@ -54,17 +55,19 @@ class TodoInfo extends Component{
 
         if(editing){
             return (
-                <div className = "App-main">
-                    <div>
+                <div className = "App-list">
+                    <div className ="list">
+
                         <input
                             value={this.state.todo}
                             name = "todo"
                             placeholder="insert your todo,, "
                             onChange={this.handleChange}
                         />
-                    </div>
-                    <button onClick = {this.handleDelete}> 삭제 </button>
-                    <button onClick = {this.handleTogglEdit}> 적용 </button>
+                        </div>
+                        <button onClick = {this.handleTogglEdit}> 적용 </button>
+                        <button onClick = {this.handleDelete}> 삭제 </button>
+                   </div>
                 </div>
             )
         }
@@ -73,10 +76,14 @@ class TodoInfo extends Component{
         const { todo } = this.props.todoInfo;
 
         return (
-            <div className = "App-main">
-                <div> {todo} </div>
-                <button onClick = {this.handleDelete}> 삭제 </button>
+            <div className = "App-list">
+                <label className ="list">
+                    <input type ="checkbox" />
+                    <div> {todo} </div>
+                </label>
                 <button onClick = {this.handleTogglEdit}> 수정 </button>
+                <button onClick = {this.handleDelete}> 삭제 </button>
+
             </div>
         )
     }

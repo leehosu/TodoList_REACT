@@ -27,7 +27,6 @@ class App extends Component{
                 ...e
             })
         })
-        console.log(e);
     }
 
     handleDelete = (id) => {
@@ -37,6 +36,7 @@ class App extends Component{
                 init => init.id !== id
             )
         })
+        console.log(init);
     }
 
     handleUpdate = (id,data) => {
@@ -47,18 +47,30 @@ class App extends Component{
                 ? { ...init, ...data} : init
             )
         })
+        console.log(init);
     }
 
+    componentDidUpdate(prevProps, prevState){
+        const { init } = this.state; 
+        if(prevState.init !== this.state){
+            console.log(init);
+        }
+    }
+    
     render(){
-        // const { init } = this.state; 
         return(
             <div className = "App">
-                <TodoForm onCreate = {this.handleCreate} />
+                <div className = "App-header">
+                    <TodoForm onCreate = {this.handleCreate} />
+                </div>
+                <hr></hr>
+                <div className = "App-main">
                 <TodoList 
                     data = {this.state.init} 
                     onDelete = {this.handleDelete}
-                    onUpdate = {this.handleUpdate}
+                    onUpdate = {this.handleUpdate}  
                 />
+                </div>
             </div>
         )
     }
