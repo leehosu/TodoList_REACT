@@ -10,14 +10,6 @@ class TodoInfo extends Component{
         }
     }
 
-<<<<<<< Updated upstream
-    handleDelete = () =>{
-        const {todoInfo, onDelete} = this.props;
-        onDelete(todoInfo.id);
-    }
-    
-    render() {
-=======
     state = {
         editing : false,
         todo : ''
@@ -66,7 +58,7 @@ class TodoInfo extends Component{
                 <div className = "App-list">
                     <div className ="list">
                         <input
-                            value={this.state.todo || ''}
+                            value={this.state.todo}
                             name = "todo"
                             placeholder="insert your todo,, "
                             onChange={this.handleChange}
@@ -77,16 +69,10 @@ class TodoInfo extends Component{
                    </div>
             )
         }
->>>>>>> Stashed changes
 
         const { todo } = this.props.todoInfo;
 
         return (
-<<<<<<< Updated upstream
-            <div className = "App-main">
-               <div> {todo} </div>
-               <button onClick = {this.handleDelete}> 삭제 </button>
-=======
             <div className = "App-list">
                 <label className ="list">
                     <input type ="checkbox" />
@@ -94,7 +80,6 @@ class TodoInfo extends Component{
                 </label>
                 <button onClick = {this.handleTogglEdit}> 수정 </button>
                 <button onClick = {this.handleDelete}> 삭제 </button>
->>>>>>> Stashed changes
             </div>
         )
     }
