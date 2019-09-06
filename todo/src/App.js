@@ -39,10 +39,6 @@ class App extends Component{
         console.log(id);
     }
 
-<<<<<<< Updated upstream
-    render(){// eslint-disable-next-line
-        const { init } = this.state; 
-=======
     handleUpdate = (id,data) => {
         const {init} = this.state;
         this.setState({
@@ -55,17 +51,25 @@ class App extends Component{
         console.log(init);
     }
 
+    componentDidUpdate(prevProps, prevState){
+        const { init } = this.state; 
+        if(prevState.init !== this.state){
+            console.log(init);
+        }
+    }
+    
     render(){
->>>>>>> Stashed changes
         return(
             <div className = "App">
                 <div className = "App-header">
                     <TodoForm onCreate = {this.handleCreate} />
                 </div>
+                <hr></hr>
                 <div className = "App-main">
                 <TodoList 
                     data = {this.state.init} 
-                    onDelete = {this.handleDelete}    
+                    onDelete = {this.handleDelete}
+                    onUpdate = {this.handleUpdate}  
                 />
                 </div>
             </div>
