@@ -22,7 +22,7 @@ class TodoForm extends Component{
 
     render(){
         return(
-            <>
+               
             <form onSubmit = {this.handleSubmit}>
                 <input
                     placeholder = " insert your todo,, "
@@ -38,8 +38,6 @@ class TodoForm extends Component{
                     Add
                 </button>
             </form>
-            <br />
-            </>
         )
     }
 }
