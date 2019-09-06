@@ -13,7 +13,7 @@ class App extends Component{
             todo : '카페 가기'
         },
         {
-            id : this.id ++,
+            id : this.id++,
             todo : 'REACT로 TODOLIST 만들기'
         }
         ]
@@ -36,7 +36,7 @@ class App extends Component{
                 init => init.id !== id
             )
         })
-        console.log(id);
+        console.log(init);
     }
 
     handleUpdate = (id,data) => {
@@ -47,7 +47,6 @@ class App extends Component{
                 ? { ...init, ...data} : init
             )
         })
-        
         console.log(init);
     }
 

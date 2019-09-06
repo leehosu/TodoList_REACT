@@ -20,7 +20,7 @@ class TodoInfo extends Component{
         this.setState({
             todo : value
         });
-        
+
     }
 
     handleDelete = () => {
@@ -70,6 +70,7 @@ class TodoInfo extends Component{
             )
         }
 
+        // 일반 모드
         const { todo } = this.props.todoInfo;
 
         return (
@@ -80,6 +81,7 @@ class TodoInfo extends Component{
                 </label>
                 <button onClick = {this.handleTogglEdit}> 수정 </button>
                 <button onClick = {this.handleDelete}> 삭제 </button>
+
             </div>
         )
     }
