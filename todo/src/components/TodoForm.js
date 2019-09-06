@@ -8,7 +8,7 @@ class TodoForm extends Component{
 
     handleChange = (e) =>{
         this.setState({
-            todo : e.target.value
+            [e.target.todo]  : e.target.value
         })
     }
 
@@ -27,7 +27,7 @@ class TodoForm extends Component{
                 <input
                     placeholder = " insert your todo,, "
                     value = {this.state.todo}
-                    name = "input"
+                    name = "todo"
                     onChange = {this.handleChange}
                     className = "input"
                 />
