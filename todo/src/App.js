@@ -36,7 +36,7 @@ class App extends Component{
                 init => init.id !== id
             )
         })
-        console.log(id);
+        console.log(init);
     }
 
     handleUpdate = (id,data) => {
