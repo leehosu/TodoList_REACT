@@ -57,17 +57,15 @@ class TodoInfo extends Component{
             return (
                 <div className = "App-list">
                     <div className ="list">
-
                         <input
-                            value={this.state.todo}
+                            value = {this.state.todo}
                             name = "todo"
                             placeholder="insert your todo,, "
                             onChange={this.handleChange}
                         />
-                        </div>
-                        <button onClick = {this.handleTogglEdit}> 적용 </button>
-                        <button onClick = {this.handleDelete}> 삭제 </button>
-                   </div>
+                    </div>
+                    <button onClick = {this.handleTogglEdit}> 적용 </button>
+                    <button onClick = {this.handleDelete}> 삭제 </button>
                 </div>
             )
         }
