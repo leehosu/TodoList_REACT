@@ -8,7 +8,7 @@ class TodoForm extends Component{
 
     handleChange = (e) =>{
         this.setState({
-            [e.target.todo]  : e.target.value
+            todo : e.target.value
         })
     }
 
@@ -29,7 +29,7 @@ class TodoForm extends Component{
                     value = {this.state.todo}
                     name = "todo"
                     onChange = {this.handleChange}
-                    className = "input"
+                    className = "inputArea"
                 />
                 <button 
                     className = "addBtn"
