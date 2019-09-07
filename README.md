@@ -9,12 +9,12 @@
 ![overview](./image/overview.gif)
 
 ## Issue 
-<input type = "checkbox" checked> Update
-<input type = "checkbox" checked> Delete
-<input type = "checkbox" checked> state Array
-<input type = "checkbox" checked> componentDidUpdate
-<input type = "checkbox" checked> show console about state
-<input type = "checkbox" checked> CheckBox
-<input type = "checkbox"> localStorage
-<input type = "checkbox"> layout refactoring
-<input type = "checkbox"> directory refatoring
+- [x] Update
+- [x] Delete
+- [x] state Array
+- [x] componentDidUpdate
+- [x] show console about state
+- [x] CheckBox
+- [ ] localStorage
+- [ ] layout refactoring
+- [ ] directory refatoring
