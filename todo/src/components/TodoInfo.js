@@ -12,6 +12,7 @@ class TodoInfo extends Component{
 
     state = {
         editing : false,
+        checking : false,
         todo : ''
     }
 
@@ -35,6 +36,12 @@ class TodoInfo extends Component{
         })
     }
 
+    handleCheck = () => {
+        const { checking } = this.state;
+        this.setState({
+            checking : !checking
+        })
+    }
     componentDidUpdate(prevProps, prevState){
         const { todoInfo, onUpdate } = this.props;
         if(!prevState.editing && this.state.editing){
@@ -62,6 +69,7 @@ class TodoInfo extends Component{
                             name = "todo"
                             placeholder="insert your todo,, "
                             onChange={this.handleChange}
+                            className = "editArea"
                         />
                     </div>
                     <button onClick = {this.handleTogglEdit}> 적용 </button>
@@ -76,7 +84,11 @@ class TodoInfo extends Component{
         return (
             <div className = "App-list">
                 <label className ="list">
-                    <input type ="checkbox" />
+                    <input type ="checkbox"
+                        name = "checking"
+                        defaultChecked = {this.state.checking}
+                        onChange = {this.handleCheck}
+                     />
                     <div> {todo} </div>
                 </label>
                 <button onClick = {this.handleTogglEdit}> 수정 </button>
