@@ -29,7 +29,7 @@ class TodoForm extends Component{
                     value = {this.state.todo}
                     name = "todo"
                     onChange = {this.handleChange}
-                    className = "input"
+                    className = "inputArea"
                 />
                 <button 
                     className = "addBtn"
