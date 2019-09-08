@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TodoInfo from './TodoInfo';
+import TodoInfo from '../TodoInfo/TodoInfo';
 
 class TodoList extends Component{
     static defaultProps ={

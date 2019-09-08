@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import TodoForm from './components/TodoForm.js';
-import TodoList from './components/TodoList.js';
+import TodoForm from './components/TodoForm/TodoForm';
+import TodoList from './components/TodoList/TodoList';
 import './_App.scss';
 
 class App extends Component{
@@ -8,14 +8,6 @@ class App extends Component{
     id = 0
     state = {
         init: [
-        {
-            id : this.id++,
-            todo : '카페 가기'
-        },
-        {
-            id : this.id++,
-            todo : 'REACT로 TODOLIST 만들기'
-        }
         ]
     };
 
@@ -47,7 +39,6 @@ class App extends Component{
                 ? { ...init, ...data} : init
             )
         })
-        console.log(init);
     }
 
     componentDidUpdate(prevProps, prevState){
