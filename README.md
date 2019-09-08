@@ -16,5 +16,5 @@
 - [x] show console about state
 - [x] CheckBox
 - [ ] localStorage
-- [ ] layout refactoring
-- [ ] directory refatoring
+- [ ] layout refactoring(Proceeding..)
+- [x] directory refatoring
