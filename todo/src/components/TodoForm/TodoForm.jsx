@@ -14,7 +14,7 @@ class TodoForm extends Component{
 
     handleSubmit = (e) => {
         e.preventDefault();
-        if(this.state.todo.trim) return;
+        if(!this.state.todo.trim()) return;
         this.props.onCreate(this.state);
         this.setState({
             todo : '',
