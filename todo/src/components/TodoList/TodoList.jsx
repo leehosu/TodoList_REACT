@@ -16,7 +16,7 @@ class TodoList extends Component{
                             key = {todoInfo.id} 
                             todoInfo = {todoInfo}
                             onDelete = {onDelete}
-                            onUpdate = {onUpdate}   
+                            onUpdate = {onUpdate}
                     />)
         )
         return(
