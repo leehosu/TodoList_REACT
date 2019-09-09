@@ -15,6 +15,7 @@
 - [x] componentDidUpdate
 - [x] show console about state
 - [x] CheckBox
+- [x] when input text isn't input, not add 
 - [ ] localStorage
 - [ ] layout refactoring(Proceeding..)
 - [x] directory refatoring
