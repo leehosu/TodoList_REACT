@@ -1,0 +1,21 @@
+.App{
+    max-width: 500px;
+    top : -100px;
+    margin: 10em auto;
+    margin-bottom: -10em;
+    height: 600px;
+    display: block;
+    position: relative;
+    background-color: white;
+    border: 1px solid gray;
+}
+
+.App-header{
+     margin : 3%;
+}
+
+.App-main{
+    height: 500px;
+    display: block;
+    overflow:auto;
+}

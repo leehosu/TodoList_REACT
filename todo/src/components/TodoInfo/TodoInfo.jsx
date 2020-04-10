@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './_TodoInfo.scss';
+import './TodoInfo.css';
 
 class TodoInfo extends Component{
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './_TodoForm.scss'
+import './TodoForm.css'
 
 class TodoForm extends Component{
     state = {
@@ -24,7 +24,7 @@ class TodoForm extends Component{
     render(){
         return(
                
-            <form onSubmit = {this.handleSubmit}>
+            <form onSubmit = {this.handleSubmit} className="todo-form">
                 <input
                     placeholder = " insert your todo,, "
                     value = {this.state.todo}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TodoForm from './components/TodoForm/TodoForm';
 import TodoList from './components/TodoList/TodoList';
-import './_App.scss';
+import './App.css';
 
 class App extends Component{
 
@@ -11,12 +11,6 @@ class App extends Component{
         ]
     };
 
-
-    saveStorage = () => {
-        const { init } = this.state;
-        localStorage.setItem("storageList",JSON.stringify(init));        
-    }
-
     handleCreate = (e) => {
         const { init } = this.state;
         this.setState({
@@ -25,7 +19,6 @@ class App extends Component{
                 ...e
             })
         })
-        this.saveStorage(init);
     }
 
     handleDelete = (id) => {
@@ -36,7 +29,6 @@ class App extends Component{
             )
         })
         console.log(init);
-        this.saveStorage(init);
     }
 
     handleUpdate = (id,data) => {
@@ -48,7 +40,6 @@ class App extends Component{
             )
         })
 
-        this.saveStorage(init);
     }
 
     componentDidUpdate(prevProps, prevState){

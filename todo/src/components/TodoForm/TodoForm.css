@@ -1,0 +1,28 @@
+.todo-form{
+    display: flex;
+}
+
+.inputArea{
+    width: 365px;
+    height: 30px;
+    float: left;
+    margin-left: 5%;
+}
+
+.addBtn {
+    background: #1AAB8A;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 37px;
+    font-size: 1.6em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+.addBtn:hover {
+    background: #fff;
+    color: #1AAB8A;
+}
+
