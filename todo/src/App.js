@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import TodoForm from './components/TodoForm';
-import TodoInfo from './components/TodoInfo'
 import './App.css';
 import TodoFooter from './components/TodoFooter';
 import logo from './logo.png';
+import TodoList from './components/TodoList/TodoList';
 
 class App extends Component{
 
@@ -58,6 +58,11 @@ class App extends Component{
     }
 
     render(){
+        const list = this.state.init.map(
+            todoInfo => (
+                <TodoList key = {todoInfo.id} todoInfo = {todoInfo} onDelete={this.handleDelete} onUpdate = {this.handleUpdate} />
+            )
+        )
         return(
             <div className = "App">
                 <div className="logo">
@@ -65,11 +70,7 @@ class App extends Component{
                 </div>
                 <section className="todoapp">
                 <TodoForm onCreate = {this.handleCreate} />
-                <TodoInfo
-                    data = {this.state.init} 
-                    onDelete = {this.handleDelete}
-                    onUpdate = {this.handleUpdate}
-                />
+                {list}
                 <TodoFooter />
                 </section>
             </div>
