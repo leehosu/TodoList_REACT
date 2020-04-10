@@ -9,7 +9,7 @@ class TodoInfo extends Component{
     };
     render(){
 
-        const { data, onDelete, onUpdate, onCheck } = this.props;
+        const { data, onDelete, onUpdate } = this.props;
 
         const list = data.map(
             todoInfo => (<TodoList 

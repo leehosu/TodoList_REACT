@@ -61,7 +61,7 @@ class App extends Component{
         return(
             <div className = "App">
                 <div className="logo">
-                    <img src={logo} className="react-logo"/>
+                    <img src={logo} className="react-logo" alt ="logo" />
                 </div>
                 <section className="todoapp">
                 <TodoForm onCreate = {this.handleCreate} />
