@@ -13,32 +13,30 @@ class TodoForm extends Component{
     }
 
     handleSubmit = (e) => {
-        e.preventDefault();
-        if(!this.state.todo.trim()) return;
-        this.props.onCreate(this.state);
-        this.setState({
-            todo : '',
-        })
+        if(e.key === 'Enter'){
+            e.preventDefault();
+            if(!this.state.todo.trim()) return;
+            this.props.onCreate(this.state);
+            this.setState({
+                todo : '',
+            })
+        }
     }
 
     render(){
         return(
-               
-            <form onSubmit = {this.handleSubmit} className="todo-form">
-                <input
+             <header className="todo-header">
+                 <h1> React TodoList </h1>
+                 <input
                     placeholder = " insert your todo,, "
                     value = {this.state.todo}
                     name = "todo"
                     onChange = {this.handleChange}
-                    className = "inputArea"
+                    className = "new-todo"
+                    onKeyPress={this.handleSubmit}
                 />
-                <button 
-                    className = "addBtn"
-                    type = "submit" 
-                >
-                    Add
-                </button>
-            </form>
+             </header>
+                
         )
     }
 }

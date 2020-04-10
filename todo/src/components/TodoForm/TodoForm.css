@@ -1,28 +1,15 @@
-.todo-form{
+.todo-header{
     display: flex;
 }
-
-.inputArea{
-    width: 365px;
-    height: 30px;
-    float: left;
-    margin-left: 5%;
-}
-
-.addBtn {
-    background: #1AAB8A;
-    color: #fff;
-    border: none;
-    position: relative;
-    height: 37px;
-    font-size: 1.6em;
-    cursor: pointer;
-    transition: 800ms ease all;
-    outline: none;
-}
-
-.addBtn:hover {
-    background: #fff;
-    color: #1AAB8A;
-}
-
+h1 {
+    position: absolute;
+    top: -115px;
+    width: 100%;
+    font-size: 80px;
+    font-weight: 100;
+    text-align: center;
+    color: black;
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+  }

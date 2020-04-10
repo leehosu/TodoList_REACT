@@ -1,8 +1,7 @@
 # TodoList_REACT
 
----
-- JavaScript로 만들었던 TODOLIST를 REACT 형식으로 바꾸는 repo이다.
----
+> React로 Todolist를 구현해보는 repo이다.
+
 
 ## OverView
 
@@ -16,6 +15,4 @@
 - [x] show console about state
 - [x] CheckBox
 - [x] when input text isn't input, not add 
-- [ ] localStorage
-- [ ] layout refactoring(Proceeding..)
 - [x] directory refatoring
